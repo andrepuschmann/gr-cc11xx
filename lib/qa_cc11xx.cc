@@ -26,11 +26,13 @@
  */
 
 #include "qa_cc11xx.h"
+#include "qa_cc11xx_deframer_bb.h"
 
 CppUnit::TestSuite *
 qa_cc11xx::suite()
 {
   CppUnit::TestSuite *s = new CppUnit::TestSuite("cc11xx");
+  s->addTest(gr::cc11xx::qa_cc11xx_deframer_bb::suite());
 
   return s;
 }

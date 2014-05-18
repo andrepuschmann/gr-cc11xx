@@ -26,6 +26,7 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND cc11xx_sources
+    cc11xx_deframer_bb_impl.cc
 )
 
 set(cc11xx_sources "${cc11xx_sources}" PARENT_SCOPE)
@@ -63,6 +64,7 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 list(APPEND test_cc11xx_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_cc11xx.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_cc11xx.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/qa_cc11xx_deframer_bb.cc
 )
 
 add_executable(test-cc11xx ${test_cc11xx_sources})

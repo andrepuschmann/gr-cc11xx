@@ -22,5 +22,5 @@
 ########################################################################
 install(FILES
     api.h
-    DESTINATION include/cc11xx
+    cc11xx_deframer_bb.h DESTINATION include/cc11xx
 )

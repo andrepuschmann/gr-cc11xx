@@ -41,3 +41,4 @@ include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-cc11xx)
 set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
+GR_ADD_TEST(qa_cc11xx_deframer_bb ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_cc11xx_deframer_bb.py)
