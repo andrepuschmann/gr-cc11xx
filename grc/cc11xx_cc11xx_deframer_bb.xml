@@ -1,38 +1,75 @@
 <?xml version="1.0"?>
 <block>
-  <name>cc11xx_deframer_bb</name>
+  <name>CC11XX Deframer</name>
   <key>cc11xx_cc11xx_deframer_bb</key>
   <category>cc11xx</category>
   <import>import cc11xx</import>
-  <make>cc11xx.cc11xx_deframer_bb()</make>
-  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
-       Sub-nodes:
-       * name
-       * key (makes the value accessible as $keyname, e.g. in the make node)
-       * type -->
-  <param>
-    <name>...</name>
-    <key>...</key>
-    <type>...</type>
-  </param>
+  <make>cc11xx.cc11xx_deframer_bb($sync1, $sync2, $has_whitening, $has_crc, $preamble_bytes)</make>
 
-  <!-- Make one 'sink' node per input. Sub-nodes:
-       * name (an identifier for the GUI)
-       * type
-       * vlen
-       * optional (set to 1 for optional inputs) -->
-  <sink>
-    <name>in</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
-  </sink>
+    <param>
+        <name>Sync byte 1</name>
+        <key>sync1</key>
+        <value>0xe9</value>
+        <type>int</type>
+    </param>
 
-  <!-- Make one 'source' node per output. Sub-nodes:
-       * name (an identifier for the GUI)
-       * type
-       * vlen
-       * optional (set to 1 for optional inputs) -->
-  <source>
-    <name>out</name>
-    <type><!-- e.g. int, float, complex, byte, short, xxx_vector, ...--></type>
-  </source>
+    <param>
+        <name>Sync byte 2</name>
+        <key>sync2</key>
+        <value>0xca</value>
+        <type>int</type>
+    </param>
+
+    <param>
+        <name>Whitening</name>
+        <key>has_whitening</key>
+        <type>enum</type>
+        <option>
+            <name>Yes</name>
+            <key>True</key>
+        </option>
+        <option>
+            <name>No</name>
+            <key>False</key>
+        </option>
+    </param>
+
+    <param>
+        <name>CRC</name>
+        <key>has_crc</key>
+        <type>enum</type>
+        <option>
+            <name>Yes</name>
+            <key>True</key>
+        </option>
+        <option>
+            <name>No</name>
+            <key>False</key>
+        </option>
+    </param>
+    <param>
+        <name>Preamble length</name>
+        <key>preamble_bytes</key>
+        <type>enum</type>
+        <option>
+            <name>2</name>
+            <key>2</key>
+        </option>
+        <option>
+            <name>4</name>
+            <key>4</key>
+        </option>
+    </param>
+
+    <sink>
+        <name>in</name>
+        <type>byte</type>
+    </sink>
+
+    <source>
+        <name>out</name>
+        <type>message</type>
+    </source>
+
+
 </block>

@@ -101,9 +101,9 @@ endif()
 # Setup doxygen option
 ########################################################################
 if(DOXYGEN_FOUND)
-	option(ENABLE_DOXYGEN "Build docs using Doxygen" ON)
+    option(ENABLE_DOXYGEN "Build docs using Doxygen" ON)
 else(DOXYGEN_FOUND)
-	option(ENABLE_DOXYGEN "Build docs using Doxygen" OFF)
+    option(ENABLE_DOXYGEN "Build docs using Doxygen" OFF)
 endif(DOXYGEN_FOUND)
 
 ########################################################################
@@ -151,10 +151,11 @@ add_subdirectory(python)
 add_subdirectory(grc)
 add_subdirectory(apps)
 add_subdirectory(docs)
+add_subdirectory(examples/c++)
 
 ########################################################################
 # Install cmake search helper for this library
 ########################################################################
-install(FILES cmake/Modules/cc11xxConfig.cmake        
+install(FILES cmake/Modules/cc11xxConfig.cmake
     DESTINATION lib/cmake/cc11xx
 )

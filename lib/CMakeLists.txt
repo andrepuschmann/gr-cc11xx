@@ -27,12 +27,13 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 list(APPEND cc11xx_sources
     cc11xx_deframer_bb_impl.cc
+    cc11xx_frame.cc
 )
 
 set(cc11xx_sources "${cc11xx_sources}" PARENT_SCOPE)
 if(NOT cc11xx_sources)
-	MESSAGE(STATUS "No C++ sources... skipping lib/")
-	return()
+    MESSAGE(STATUS "No C++ sources... skipping lib/")
+    return()
 endif(NOT cc11xx_sources)
 
 add_library(gnuradio-cc11xx SHARED ${cc11xx_sources})
@@ -62,6 +63,7 @@ include(GrTest)
 include_directories(${CPPUNIT_INCLUDE_DIRS})
 
 list(APPEND test_cc11xx_sources
+    ${CMAKE_CURRENT_SOURCE_DIR}/cc11xx_frame.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/test_cc11xx.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_cc11xx.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_cc11xx_deframer_bb.cc
