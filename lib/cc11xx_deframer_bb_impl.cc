@@ -183,11 +183,9 @@ cc11xx_deframer_bb_impl::general_work (int noutput_items,
                 std::cout << boost::format("SYNC_SEARCH: ninput=%d\n") % ninput;
             }
 
-            // read bits at offset position
-            int bits_left = abs_ninput + ninput - d_offset;
             int bits_needed = d_preamble_bytes * 8;
             int consumed_items = 0;
-            if (bits_left >= bits_needed) {
+            if (ninput >= bits_needed) {
                 // read sync bytes
                 bool sync_found = true;
                 for (int i = 0; i < d_preamble_bytes; i++) {
