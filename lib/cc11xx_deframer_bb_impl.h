@@ -33,7 +33,6 @@ namespace gr {
      private:
         enum {STATE_PREAMBLE_SEARCH, STATE_SYNC_SEARCH, STATE_HAVE_SYNC, STATE_HAVE_HEADER} d_state;
 
-        uint64_t d_offset; // !< \brief Sample number of beginning of the preamble
         std::vector<uint8_t> d_sync;
         int d_preamble_bytes;
         cc11xx_frame d_frame;

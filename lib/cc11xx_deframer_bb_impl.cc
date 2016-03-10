@@ -123,7 +123,6 @@ void cc11xx_deframer_bb_impl::enter_have_sync()
         std::cout << boost::format("@ enter_have_sync()\n");
 
     d_state = STATE_HAVE_SYNC;
-    d_offset = 0;
     d_frame.reset();
 }
 
@@ -153,7 +152,7 @@ cc11xx_deframer_bb_impl::general_work (int noutput_items,
 
             // set offset to end of input buffer
             // if a tag is present, it will be set to its position
-            d_offset = ninput;
+            uint64_t offset = ninput;
 
             // read tags from input data
             std::vector<tag_t> tags;
@@ -163,17 +162,17 @@ cc11xx_deframer_bb_impl::general_work (int noutput_items,
                     std::cout << boost::format("Found tag with key: %s\n") % pmt::symbol_to_string(tags[i].key);
                 if (pmt::symbol_to_string(tags[i].key) == "preamble") {
                     // update offset to this tag
-                    d_offset = tags[i].offset - abs_ninput;
-                    assert(d_offset <= ninput);
+                    offset = tags[i].offset - abs_ninput;
+                    assert(offset <= ninput);
                     if (VERBOSE_PREAMBLE_SEARCH)
-                        std::cout << boost::format("Preamble found at %d\n") % d_offset;
+                        std::cout << boost::format("Preamble found at %d\n") % offset;
 
                     enter_sync_search();
                     break;
                 }
             }
 
-            consume(0, d_offset);
+            consume(0, offset);
         }
         break;
 
@@ -183,11 +182,9 @@ cc11xx_deframer_bb_impl::general_work (int noutput_items,
                 std::cout << boost::format("SYNC_SEARCH: ninput=%d\n") % ninput;
             }
 
-            // read bits at offset position
-            int bits_left = abs_ninput + ninput - d_offset;
             int bits_needed = d_preamble_bytes * 8;
             int consumed_items = 0;
-            if (bits_left >= bits_needed) {
+            if (ninput >= bits_needed) {
                 // read sync bytes
                 bool sync_found = true;
                 for (int i = 0; i < d_preamble_bytes; i++) {
