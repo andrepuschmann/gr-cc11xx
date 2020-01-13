@@ -31,7 +31,7 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    DESTINATION ${GR_PYTHON_DIR}/cc11xx
+    DESTINATION "${CMAKE_INSTALL_PREFIX}${GR_PYTHON_DIR}/cc11xx"
 )
 
 ########################################################################
