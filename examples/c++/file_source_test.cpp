@@ -29,7 +29,7 @@
 #include <gnuradio/analog/simple_squelch_cc.h>
 #include <gnuradio/analog/quadrature_demod_cf.h>
 #include <gnuradio/filter/firdes.h>
-#include <gnuradio/filter/fir_filter_ccf.h>
+#include <gnuradio/filter/fir_filter_blk.h>
 #include <gnuradio/digital/clock_recovery_mm_ff.h>
 #include <gnuradio/digital/binary_slicer_fb.h>
 #include <gnuradio/digital/correlate_access_code_tag_bb.h>
@@ -72,7 +72,9 @@ int main(int argc, char **argv)
     // create the blocks
     blocks::file_source::sptr src = blocks::file_source::make(8, filename.c_str(), false);
     blocks::throttle::sptr throttle = blocks::throttle::make(8, fs);
-    filter::fir_filter_ccf::sptr lp = filter::fir_filter_ccf::make(filter_decim, taps);
+    filter::fir_filter_blk<gr_complex, gr_complex, float>::sptr lp =
+        filter::fir_filter_blk<gr_complex, gr_complex, float>::make(
+            filter_decim, taps);
     analog::simple_squelch_cc::sptr squelch = analog::simple_squelch_cc::make(squelch_threshold, squelch_alpha);
     analog::quadrature_demod_cf::sptr demod = analog::quadrature_demod_cf::make(0.2);
 

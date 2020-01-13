@@ -1,4 +1,4 @@
-# Copyright 2011 Free Software Foundation, Inc.
+# Copyright 2018 Free Software Foundation, Inc.
 #
 # This file is part of GNU Radio
 #
@@ -17,24 +17,10 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
-include_directories(
-    ${GR_AUDIO_INCLUDE_DIRS}
-    ${GR_ANALOG_INCLUDE_DIRS}
-    ${Boost_INCLUDE_DIRS}
-)
+include(CMakeFindDependencyMacro)
 
-
-
-add_executable(deframer deframer.cpp)
-target_link_libraries(deframer
-  gnuradio-runtime gnuradio-audio gnuradio-analog gnuradio-blocks gnuradio-digital gnuradio-cc11xx boost_system)
-
-add_executable(file_source_test file_source_test.cpp)
-target_link_libraries(file_source_test
-  gnuradio-runtime gnuradio-audio gnuradio-analog gnuradio-filter gnuradio-blocks gnuradio-digital gnuradio-cc11xx boost_system)
-
-#INSTALL(TARGETS
-#    deframer
-#    DESTINATION ${GR_gnuradio-homematic}
-#    COMPONENT "homematic_examples"
-#)
+set(target_deps "@TARGET_DEPENDENCIES@")
+foreach(dep IN LISTS target_deps)
+    find_dependency(${dep})
+endforeach()
+include("${CMAKE_CURRENT_LIST_DIR}/@TARGET@Targets.cmake")

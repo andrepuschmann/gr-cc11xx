@@ -21,7 +21,7 @@
 
 #include <gnuradio/top_block.h>
 #include <gnuradio/audio/sink.h>
-#include <gnuradio/blocks/vector_source_b.h>
+#include <gnuradio/blocks/vector_source.h>
 #include <gnuradio/blocks/vector_to_stream.h>
 #include <gnuradio/blocks/null_sink.h>
 #include <gnuradio/blocks/file_source.h>
