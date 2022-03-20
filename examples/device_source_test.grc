@@ -1,2151 +1,1557 @@
-<?xml version='1.0' encoding='ASCII'?>
-<flow_graph>
-  <timestamp>Sat May 24 15:42:55 2014</timestamp>
-  <block>
-    <key>options</key>
-    <param>
-      <key>id</key>
-      <value>top_block</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value></value>
-    </param>
-    <param>
-      <key>author</key>
-      <value></value>
-    </param>
-    <param>
-      <key>description</key>
-      <value></value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1280, 1024</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>wx_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(10, 10)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_complex_to_mag</key>
-    <param>
-      <key>id</key>
-      <value>blocks_complex_to_mag_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(738, 225)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_multiply_const_vxx</key>
-    <param>
-      <key>id</key>
-      <value>blocks_multiply_const_vxx_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>mag_gain</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(947, 221)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_simple_squelch_cc</key>
-    <param>
-      <key>id</key>
-      <value>analog_simple_squelch_cc_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>threshold</key>
-      <value>squelch_threshold</value>
-    </param>
-    <param>
-      <key>alpha</key>
-      <value>squelch_alpha</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(677, 273)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>notebook</key>
-    <param>
-      <key>id</key>
-      <value>nb0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.NB_TOP</value>
-    </param>
-    <param>
-      <key>labels</key>
-      <value>['tab1', 'tab2', 'tab3']</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1123, 13)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>fs</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1000e3</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>50e3</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>2500e3</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(4, 125)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>fc</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>868.29e6</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>800.6e6</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>921.6e6</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(6, 260)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>decim</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>1000</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>1000</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>int_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(8, 405)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>squelch_alpha</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>squelch alpha</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.5</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>2,1,1,1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(721, 611)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>squelch_threshold</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>squelch threshold</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>-10</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>-90</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>1,1,1,1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(512, 611)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>demod_gain</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>demod gain</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.4</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(871, 625)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_char_to_float</key>
-    <param>
-      <key>id</key>
-      <value>blocks_char_to_float_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>scale</key>
-      <value>scale</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(716, 347)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>mu</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.5</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(143, 531)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>gain_mu</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.175</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(285, 530)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>omega</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>5</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(18, 527)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>mag_gain</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>30</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(218, 651)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>gain_omega</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.0076</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0.001</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>0.02</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(346, 671)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>scale</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1042, 630)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>cutoff</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>50e3</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>200e3</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>800</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(44, 677)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_quadrature_demod_cf</key>
-    <param>
-      <key>id</key>
-      <value>analog_quadrature_demod_cf_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>gain</key>
-      <value>demod_gain</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(869, 265)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_clock_recovery_mm_xx</key>
-    <param>
-      <key>id</key>
-      <value>digital_clock_recovery_mm_xx_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>omega</key>
-      <value>omega</value>
-    </param>
-    <param>
-      <key>gain_omega</key>
-      <value>gain_omega</value>
-    </param>
-    <param>
-      <key>mu</key>
-      <value>mu</value>
-    </param>
-    <param>
-      <key>gain_mu</key>
-      <value>gain_mu</value>
-    </param>
-    <param>
-      <key>omega_relative_limit</key>
-      <value>0.005</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(270, 385)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>low_pass_filter</key>
-    <param>
-      <key>id</key>
-      <value>low_pass_filter_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fir_filter_ccf</value>
-    </param>
-    <param>
-      <key>decim</key>
-      <value>decim</value>
-    </param>
-    <param>
-      <key>interp</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>gain</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>fs</value>
-    </param>
-    <param>
-      <key>cutoff_freq</key>
-      <value>cutoff</value>
-    </param>
-    <param>
-      <key>width</key>
-      <value>cutoff/2</value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>firdes.WIN_HAMMING</value>
-    </param>
-    <param>
-      <key>beta</key>
-      <value>6.76</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(442, 176)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>osmosdr_source</key>
-    <param>
-      <key>id</key>
-      <value>osmosdr_source_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fc32</value>
-    </param>
-    <param>
-      <key>args</key>
-      <value>bladerf=0</value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>sample_rate</key>
-      <value>fs</value>
-    </param>
-    <param>
-      <key>freq0</key>
-      <value>fc</value>
-    </param>
-    <param>
-      <key>corr0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode0</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain0</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain0</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain0</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant0</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq1</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode1</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain1</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant1</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq2</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode2</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain2</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant2</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq3</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode3</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain3</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant3</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq4</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode4</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>gain4</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant4</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(155, 168)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>rtlsdr_source</key>
-    <param>
-      <key>id</key>
-      <value>rtlsdr_source_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>fc32</value>
-    </param>
-    <param>
-      <key>args</key>
-      <value></value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>sample_rate</key>
-      <value>fs</value>
-    </param>
-    <param>
-      <key>freq0</key>
-      <value>fc</value>
-    </param>
-    <param>
-      <key>corr0</key>
-      <value>15</value>
-    </param>
-    <param>
-      <key>dc_offset_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain0</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain0</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain0</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant0</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw0</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq1</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain1</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant1</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw1</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq2</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain2</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant2</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw2</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq3</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain3</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant3</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw3</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>freq4</key>
-      <value>100e6</value>
-    </param>
-    <param>
-      <key>corr4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>dc_offset_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>iq_balance_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain_mode4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>gain4</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>if_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant4</key>
-      <value></value>
-    </param>
-    <param>
-      <key>bw4</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(226, -1)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_binary_slicer_fb</key>
-    <param>
-      <key>id</key>
-      <value>digital_binary_slicer_fb_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(516, 400)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_correlate_access_code_tag_bb</key>
-    <param>
-      <key>id</key>
-      <value>digital_correlate_access_code_tag_bb_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>access_code</key>
-      <value>10101010101010101010101010101010</value>
-    </param>
-    <param>
-      <key>threshold</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>tagname</key>
-      <value>preamble</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(653, 466)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_socket_pdu</key>
-    <param>
-      <key>id</key>
-      <value>blocks_socket_pdu_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>"UDP_CLIENT"</value>
-    </param>
-    <param>
-      <key>host</key>
-      <value>localhost</value>
-    </param>
-    <param>
-      <key>port</key>
-      <value>52001</value>
-    </param>
-    <param>
-      <key>mtu</key>
-      <value>10000</value>
-    </param>
-    <param>
-      <key>tcp_no_delay</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1101, 437)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-  </block>
-  <block>
-    <key>wxgui_scopesink2</key>
-    <param>
-      <key>id</key>
-      <value>wxgui_scopesink2_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Sync</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>fs/decim</value>
-    </param>
-    <param>
-      <key>v_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>v_offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>t_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>ac_couple</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>xy_mode</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>0,1,1,1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value>nb0,1</value>
-    </param>
-    <param>
-      <key>trig_mode</key>
-      <value>wxgui.TRIG_MODE_AUTO</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>Counts</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(894, 374)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>wxgui_scopesink2</key>
-    <param>
-      <key>id</key>
-      <value>wxgui_scopesink2_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Scope Plot - fm demod</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>fs/decim</value>
-    </param>
-    <param>
-      <key>v_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>v_offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>t_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>ac_couple</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>xy_mode</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>0,0,2,1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value>nb0,1</value>
-    </param>
-    <param>
-      <key>trig_mode</key>
-      <value>wxgui.TRIG_MODE_AUTO</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>Counts</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1106, 276)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>wxgui_fftsink2</key>
-    <param>
-      <key>id</key>
-      <value>wxgui_fftsink2_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>FFT Plot</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>fs</value>
-    </param>
-    <param>
-      <key>baseband_freq</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>y_per_div</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>y_divs</key>
-      <value>10</value>
-    </param>
-    <param>
-      <key>ref_level</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>ref_scale</key>
-      <value>2.0</value>
-    </param>
-    <param>
-      <key>fft_size</key>
-      <value>1024</value>
-    </param>
-    <param>
-      <key>fft_rate</key>
-      <value>15</value>
-    </param>
-    <param>
-      <key>peak_hold</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>average</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>avg_alpha</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value>nb0,0</value>
-    </param>
-    <param>
-      <key>freqvar</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(730, 0)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>cc11xx_cc11xx_deframer_bb</key>
-    <param>
-      <key>id</key>
-      <value>cc11xx_cc11xx_deframer_bb_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>sync1</key>
-      <value>0xe9</value>
-    </param>
-    <param>
-      <key>sync2</key>
-      <value>0xca</value>
-    </param>
-    <param>
-      <key>has_whitening</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>has_crc</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>preamble_bytes</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(965, 507)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>rtlsdr_source_0</source_block_id>
-    <sink_block_id>wxgui_fftsink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>low_pass_filter_0</source_block_id>
-    <sink_block_id>blocks_complex_to_mag_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_complex_to_mag_0</source_block_id>
-    <sink_block_id>blocks_multiply_const_vxx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_multiply_const_vxx_0</source_block_id>
-    <sink_block_id>wxgui_scopesink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>rtlsdr_source_0</source_block_id>
-    <sink_block_id>low_pass_filter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_quadrature_demod_cf_0_0</source_block_id>
-    <sink_block_id>wxgui_scopesink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>low_pass_filter_0</source_block_id>
-    <sink_block_id>analog_simple_squelch_cc_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_simple_squelch_cc_0</source_block_id>
-    <sink_block_id>analog_quadrature_demod_cf_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_char_to_float_0</source_block_id>
-    <sink_block_id>wxgui_scopesink2_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_binary_slicer_fb_0</source_block_id>
-    <sink_block_id>blocks_char_to_float_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_clock_recovery_mm_xx_0</source_block_id>
-    <sink_block_id>digital_binary_slicer_fb_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_quadrature_demod_cf_0_0</source_block_id>
-    <sink_block_id>digital_clock_recovery_mm_xx_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>osmosdr_source_0</source_block_id>
-    <sink_block_id>wxgui_fftsink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>osmosdr_source_0</source_block_id>
-    <sink_block_id>low_pass_filter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_correlate_access_code_tag_bb_0_0</source_block_id>
-    <sink_block_id>cc11xx_cc11xx_deframer_bb_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_binary_slicer_fb_0</source_block_id>
-    <sink_block_id>digital_correlate_access_code_tag_bb_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>cc11xx_cc11xx_deframer_bb_0</source_block_id>
-    <sink_block_id>blocks_socket_pdu_0_0</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>pdus</sink_key>
-  </connection>
-</flow_graph>
+options:
+  parameters:
+    author: ''
+    catch_exceptions: 'True'
+    category: Custom
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: top_block
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: ''
+    window_size: 1280, 1024
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [10, 10]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: cutoff
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: 200e3
+    value: 50e3
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 708.0]
+    rotation: 0
+    state: true
+- name: decim
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: decim
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: int
+    start: '0'
+    step: '10'
+    stop: '1000'
+    value: '20'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 332.0]
+    rotation: 0
+    state: true
+- name: demod_gain
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: demod gain
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: '100'
+    value: '0.4'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [544, 572.0]
+    rotation: 0
+    state: true
+- name: fc
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: fc
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 800.6e6
+    step: '600'
+    stop: 921.6e6
+    value: 868.29e6
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 204.0]
+    rotation: 0
+    state: true
+- name: fs
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: fs
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: 50e3
+    step: '800'
+    stop: 2500e3
+    value: 1000e3
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 76.0]
+    rotation: 0
+    state: true
+- name: gain_mu
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: gain_mu
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: '100'
+    value: '0.175'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 460.0]
+    rotation: 0
+    state: true
+- name: gain_omega
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: gain_omega
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0.001'
+    step: '1'
+    stop: '0.02'
+    value: '0.0076'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [304, 572.0]
+    rotation: 0
+    state: true
+- name: mag_gain
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: mag_gain
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: '30'
+    value: '4'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [432, 572.0]
+    rotation: 0
+    state: true
+- name: mu
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '100'
+    value: '0.5'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [584, 708.0]
+    rotation: 0
+    state: true
+- name: omega
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: ''
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: '100'
+    value: '5'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [720, 708.0]
+    rotation: 0
+    state: true
+- name: scale
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: ''
+    label: scale
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '1'
+    stop: '100'
+    value: '1'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [680, 572.0]
+    rotation: 0
+    state: true
+- name: squelch_alpha
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 2,1,1,1
+    label: squelch alpha
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '0'
+    step: '800'
+    stop: '1'
+    value: '0.5'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [448, 708.0]
+    rotation: 0
+    state: true
+- name: squelch_threshold
+  id: variable_qtgui_range
+  parameters:
+    comment: ''
+    gui_hint: 1,1,1,1
+    label: squelch threshold
+    min_len: '200'
+    orient: QtCore.Qt.Horizontal
+    rangeType: float
+    start: '-90'
+    step: '1'
+    stop: '10'
+    value: '-10'
+    widget: counter_slider
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [304, 708.0]
+    rotation: 0
+    state: true
+- name: analog_quadrature_demod_cf_0_0
+  id: analog_quadrature_demod_cf
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain: demod_gain
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [869, 265]
+    rotation: 0
+    state: enabled
+- name: analog_simple_squelch_cc_0
+  id: analog_simple_squelch_cc
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha: squelch_alpha
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    threshold: squelch_threshold
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [677, 273]
+    rotation: 0
+    state: enabled
+- name: blocks_char_to_float_0
+  id: blocks_char_to_float
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    scale: scale
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [716, 347]
+    rotation: 0
+    state: enabled
+- name: blocks_complex_to_mag_0
+  id: blocks_complex_to_mag
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [738, 225]
+    rotation: 0
+    state: enabled
+- name: blocks_multiply_const_vxx_0
+  id: blocks_multiply_const_vxx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: mag_gain
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [947, 221]
+    rotation: 0
+    state: enabled
+- name: cc11xx_cc11xx_deframer_bb_0
+  id: cc11xx_cc11xx_deframer_bb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    has_crc: 'True'
+    has_whitening: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    preamble_bytes: '4'
+    sync1: '0xe9'
+    sync2: '0xca'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [965, 507]
+    rotation: 0
+    state: enabled
+- name: digital_binary_slicer_fb_0
+  id: digital_binary_slicer_fb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [576, 400.0]
+    rotation: 0
+    state: enabled
+- name: digital_clock_recovery_mm_xx_0
+  id: digital_clock_recovery_mm_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    gain_mu: gain_mu
+    gain_omega: gain_omega
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mu: mu
+    omega: omega
+    omega_relative_limit: '0.005'
+    type: float
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [336, 428.0]
+    rotation: 0
+    state: enabled
+- name: digital_correlate_access_code_tag_xx_0
+  id: digital_correlate_access_code_tag_xx
+  parameters:
+    access_code: '10101010101010101010101010101010'
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    tagname: preamble
+    threshold: '0'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [688, 452.0]
+    rotation: 0
+    state: true
+- name: low_pass_filter_0
+  id: low_pass_filter
+  parameters:
+    affinity: ''
+    alias: ''
+    beta: '6.76'
+    comment: ''
+    cutoff_freq: cutoff
+    decim: decim
+    gain: '1'
+    interp: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samp_rate: fs
+    type: fir_filter_ccf
+    width: cutoff/2
+    win: window.WIN_HAMMING
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [520, 92.0]
+    rotation: 0
+    state: enabled
+- name: nb
+  id: qtgui_tab_widget
+  parameters:
+    alias: ''
+    comment: ''
+    gui_hint: ''
+    label0: Tab 0
+    label1: Tab 1
+    label10: Tab 10
+    label11: Tab 11
+    label12: Tab 12
+    label13: Tab 13
+    label14: Tab 14
+    label15: Tab 15
+    label16: Tab 16
+    label17: Tab 17
+    label18: Tab 18
+    label19: Tab 19
+    label2: Tab 2
+    label3: Tab 3
+    label4: Tab 4
+    label5: Tab 5
+    label6: Tab 6
+    label7: Tab 7
+    label8: Tab 8
+    label9: Tab 9
+    num_tabs: '3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [944, 68.0]
+    rotation: 0
+    state: true
+- name: network_socket_pdu_0
+  id: network_socket_pdu
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    host: localhost
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    mtu: '10000'
+    port: '52001'
+    tcp_no_delay: 'False'
+    type: UDP_CLIENT
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 348.0]
+    rotation: 0
+    state: true
+- name: osmosdr_source_0
+  id: osmosdr_source
+  parameters:
+    affinity: ''
+    alias: ''
+    ant0: ''
+    ant1: ''
+    ant10: ''
+    ant11: ''
+    ant12: ''
+    ant13: ''
+    ant14: ''
+    ant15: ''
+    ant16: ''
+    ant17: ''
+    ant18: ''
+    ant19: ''
+    ant2: ''
+    ant20: ''
+    ant21: ''
+    ant22: ''
+    ant23: ''
+    ant24: ''
+    ant25: ''
+    ant26: ''
+    ant27: ''
+    ant28: ''
+    ant29: ''
+    ant3: ''
+    ant30: ''
+    ant31: ''
+    ant4: ''
+    ant5: ''
+    ant6: ''
+    ant7: ''
+    ant8: ''
+    ant9: ''
+    args: bladerf=0
+    bb_gain0: '20'
+    bb_gain1: '20'
+    bb_gain10: '20'
+    bb_gain11: '20'
+    bb_gain12: '20'
+    bb_gain13: '20'
+    bb_gain14: '20'
+    bb_gain15: '20'
+    bb_gain16: '20'
+    bb_gain17: '20'
+    bb_gain18: '20'
+    bb_gain19: '20'
+    bb_gain2: '20'
+    bb_gain20: '20'
+    bb_gain21: '20'
+    bb_gain22: '20'
+    bb_gain23: '20'
+    bb_gain24: '20'
+    bb_gain25: '20'
+    bb_gain26: '20'
+    bb_gain27: '20'
+    bb_gain28: '20'
+    bb_gain29: '20'
+    bb_gain3: '20'
+    bb_gain30: '20'
+    bb_gain31: '20'
+    bb_gain4: '20'
+    bb_gain5: '20'
+    bb_gain6: '20'
+    bb_gain7: '20'
+    bb_gain8: '20'
+    bb_gain9: '20'
+    bw0: '0'
+    bw1: '0'
+    bw10: '0'
+    bw11: '0'
+    bw12: '0'
+    bw13: '0'
+    bw14: '0'
+    bw15: '0'
+    bw16: '0'
+    bw17: '0'
+    bw18: '0'
+    bw19: '0'
+    bw2: '0'
+    bw20: '0'
+    bw21: '0'
+    bw22: '0'
+    bw23: '0'
+    bw24: '0'
+    bw25: '0'
+    bw26: '0'
+    bw27: '0'
+    bw28: '0'
+    bw29: '0'
+    bw3: '0'
+    bw30: '0'
+    bw31: '0'
+    bw4: '0'
+    bw5: '0'
+    bw6: '0'
+    bw7: '0'
+    bw8: '0'
+    bw9: '0'
+    clock_source0: ''
+    clock_source1: ''
+    clock_source2: ''
+    clock_source3: ''
+    clock_source4: ''
+    clock_source5: ''
+    clock_source6: ''
+    clock_source7: ''
+    comment: ''
+    corr0: '0'
+    corr1: '0'
+    corr10: '0'
+    corr11: '0'
+    corr12: '0'
+    corr13: '0'
+    corr14: '0'
+    corr15: '0'
+    corr16: '0'
+    corr17: '0'
+    corr18: '0'
+    corr19: '0'
+    corr2: '0'
+    corr20: '0'
+    corr21: '0'
+    corr22: '0'
+    corr23: '0'
+    corr24: '0'
+    corr25: '0'
+    corr26: '0'
+    corr27: '0'
+    corr28: '0'
+    corr29: '0'
+    corr3: '0'
+    corr30: '0'
+    corr31: '0'
+    corr4: '0'
+    corr5: '0'
+    corr6: '0'
+    corr7: '0'
+    corr8: '0'
+    corr9: '0'
+    dc_offset_mode0: '0'
+    dc_offset_mode1: '0'
+    dc_offset_mode10: '0'
+    dc_offset_mode11: '0'
+    dc_offset_mode12: '0'
+    dc_offset_mode13: '0'
+    dc_offset_mode14: '0'
+    dc_offset_mode15: '0'
+    dc_offset_mode16: '0'
+    dc_offset_mode17: '0'
+    dc_offset_mode18: '0'
+    dc_offset_mode19: '0'
+    dc_offset_mode2: '0'
+    dc_offset_mode20: '0'
+    dc_offset_mode21: '0'
+    dc_offset_mode22: '0'
+    dc_offset_mode23: '0'
+    dc_offset_mode24: '0'
+    dc_offset_mode25: '0'
+    dc_offset_mode26: '0'
+    dc_offset_mode27: '0'
+    dc_offset_mode28: '0'
+    dc_offset_mode29: '0'
+    dc_offset_mode3: '0'
+    dc_offset_mode30: '0'
+    dc_offset_mode31: '0'
+    dc_offset_mode4: '0'
+    dc_offset_mode5: '0'
+    dc_offset_mode6: '0'
+    dc_offset_mode7: '0'
+    dc_offset_mode8: '0'
+    dc_offset_mode9: '0'
+    freq0: fc
+    freq1: 100e6
+    freq10: 100e6
+    freq11: 100e6
+    freq12: 100e6
+    freq13: 100e6
+    freq14: 100e6
+    freq15: 100e6
+    freq16: 100e6
+    freq17: 100e6
+    freq18: 100e6
+    freq19: 100e6
+    freq2: 100e6
+    freq20: 100e6
+    freq21: 100e6
+    freq22: 100e6
+    freq23: 100e6
+    freq24: 100e6
+    freq25: 100e6
+    freq26: 100e6
+    freq27: 100e6
+    freq28: 100e6
+    freq29: 100e6
+    freq3: 100e6
+    freq30: 100e6
+    freq31: 100e6
+    freq4: 100e6
+    freq5: 100e6
+    freq6: 100e6
+    freq7: 100e6
+    freq8: 100e6
+    freq9: 100e6
+    gain0: '10'
+    gain1: '10'
+    gain10: '10'
+    gain11: '10'
+    gain12: '10'
+    gain13: '10'
+    gain14: '10'
+    gain15: '10'
+    gain16: '10'
+    gain17: '10'
+    gain18: '10'
+    gain19: '10'
+    gain2: '10'
+    gain20: '10'
+    gain21: '10'
+    gain22: '10'
+    gain23: '10'
+    gain24: '10'
+    gain25: '10'
+    gain26: '10'
+    gain27: '10'
+    gain28: '10'
+    gain29: '10'
+    gain3: '10'
+    gain30: '10'
+    gain31: '10'
+    gain4: '10'
+    gain5: '10'
+    gain6: '10'
+    gain7: '10'
+    gain8: '10'
+    gain9: '10'
+    gain_mode0: 'False'
+    gain_mode1: 'False'
+    gain_mode10: 'False'
+    gain_mode11: 'False'
+    gain_mode12: 'False'
+    gain_mode13: 'False'
+    gain_mode14: 'False'
+    gain_mode15: 'False'
+    gain_mode16: 'False'
+    gain_mode17: 'False'
+    gain_mode18: 'False'
+    gain_mode19: 'False'
+    gain_mode2: 'False'
+    gain_mode20: 'False'
+    gain_mode21: 'False'
+    gain_mode22: 'False'
+    gain_mode23: 'False'
+    gain_mode24: 'False'
+    gain_mode25: 'False'
+    gain_mode26: 'False'
+    gain_mode27: 'False'
+    gain_mode28: 'False'
+    gain_mode29: 'False'
+    gain_mode3: 'False'
+    gain_mode30: 'False'
+    gain_mode31: 'False'
+    gain_mode4: 'False'
+    gain_mode5: 'False'
+    gain_mode6: 'False'
+    gain_mode7: 'False'
+    gain_mode8: 'False'
+    gain_mode9: 'False'
+    if_gain0: '20'
+    if_gain1: '20'
+    if_gain10: '20'
+    if_gain11: '20'
+    if_gain12: '20'
+    if_gain13: '20'
+    if_gain14: '20'
+    if_gain15: '20'
+    if_gain16: '20'
+    if_gain17: '20'
+    if_gain18: '20'
+    if_gain19: '20'
+    if_gain2: '20'
+    if_gain20: '20'
+    if_gain21: '20'
+    if_gain22: '20'
+    if_gain23: '20'
+    if_gain24: '20'
+    if_gain25: '20'
+    if_gain26: '20'
+    if_gain27: '20'
+    if_gain28: '20'
+    if_gain29: '20'
+    if_gain3: '20'
+    if_gain30: '20'
+    if_gain31: '20'
+    if_gain4: '20'
+    if_gain5: '20'
+    if_gain6: '20'
+    if_gain7: '20'
+    if_gain8: '20'
+    if_gain9: '20'
+    iq_balance_mode0: '0'
+    iq_balance_mode1: '0'
+    iq_balance_mode10: '0'
+    iq_balance_mode11: '0'
+    iq_balance_mode12: '0'
+    iq_balance_mode13: '0'
+    iq_balance_mode14: '0'
+    iq_balance_mode15: '0'
+    iq_balance_mode16: '0'
+    iq_balance_mode17: '0'
+    iq_balance_mode18: '0'
+    iq_balance_mode19: '0'
+    iq_balance_mode2: '0'
+    iq_balance_mode20: '0'
+    iq_balance_mode21: '0'
+    iq_balance_mode22: '0'
+    iq_balance_mode23: '0'
+    iq_balance_mode24: '0'
+    iq_balance_mode25: '0'
+    iq_balance_mode26: '0'
+    iq_balance_mode27: '0'
+    iq_balance_mode28: '0'
+    iq_balance_mode29: '0'
+    iq_balance_mode3: '0'
+    iq_balance_mode30: '0'
+    iq_balance_mode31: '0'
+    iq_balance_mode4: '0'
+    iq_balance_mode5: '0'
+    iq_balance_mode6: '0'
+    iq_balance_mode7: '0'
+    iq_balance_mode8: '0'
+    iq_balance_mode9: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchan: '1'
+    num_mboards: '1'
+    sample_rate: fs
+    sync: sync
+    time_source0: ''
+    time_source1: ''
+    time_source2: ''
+    time_source3: ''
+    time_source4: ''
+    time_source5: ''
+    time_source6: ''
+    time_source7: ''
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [216, 204.0]
+    rotation: 0
+    state: enabled
+- name: qtgui_freq_sink_x_0
+  id: qtgui_freq_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    average: '1.0'
+    axislabels: 'True'
+    bw: fs
+    color1: '"blue"'
+    color10: '"dark blue"'
+    color2: '"red"'
+    color3: '"green"'
+    color4: '"black"'
+    color5: '"cyan"'
+    color6: '"magenta"'
+    color7: '"yellow"'
+    color8: '"dark red"'
+    color9: '"dark green"'
+    comment: ''
+    ctrlpanel: 'False'
+    fc: '0'
+    fftsize: '1024'
+    freqhalf: 'True'
+    grid: 'False'
+    gui_hint: ''
+    label: Relative Gain
+    label1: ''
+    label10: ''''''
+    label2: ''''''
+    label3: ''''''
+    label4: ''''''
+    label5: ''''''
+    label6: ''''''
+    label7: ''''''
+    label8: ''''''
+    label9: ''''''
+    legend: 'True'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    name: '"FFT Plot"'
+    nconnections: '1'
+    norm_window: 'False'
+    showports: 'False'
+    tr_chan: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_tag: '""'
+    type: complex
+    units: dB
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    wintype: window.WIN_BLACKMAN_hARRIS
+    ymax: '10'
+    ymin: '-140'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [744, 28.0]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: nb@1:0,1,1,1
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '"sync"'
+    nconnections: '1'
+    size: '1024'
+    srate: fs/decim
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [936, 348.0]
+    rotation: 0
+    state: true
+- name: qtgui_time_sink_x_0_0
+  id: qtgui_time_sink_x
+  parameters:
+    affinity: ''
+    alias: ''
+    alpha1: '1.0'
+    alpha10: '1.0'
+    alpha2: '1.0'
+    alpha3: '1.0'
+    alpha4: '1.0'
+    alpha5: '1.0'
+    alpha6: '1.0'
+    alpha7: '1.0'
+    alpha8: '1.0'
+    alpha9: '1.0'
+    autoscale: 'False'
+    axislabels: 'True'
+    color1: blue
+    color10: dark blue
+    color2: red
+    color3: green
+    color4: black
+    color5: cyan
+    color6: magenta
+    color7: yellow
+    color8: dark red
+    color9: dark green
+    comment: ''
+    ctrlpanel: 'False'
+    entags: 'True'
+    grid: 'False'
+    gui_hint: nb@1:0,0,2,1
+    label1: Signal 1
+    label10: Signal 10
+    label2: Signal 2
+    label3: Signal 3
+    label4: Signal 4
+    label5: Signal 5
+    label6: Signal 6
+    label7: Signal 7
+    label8: Signal 8
+    label9: Signal 9
+    legend: 'True'
+    marker1: '-1'
+    marker10: '-1'
+    marker2: '-1'
+    marker3: '-1'
+    marker4: '-1'
+    marker5: '-1'
+    marker6: '-1'
+    marker7: '-1'
+    marker8: '-1'
+    marker9: '-1'
+    name: '"Scope Plot - fm demod"'
+    nconnections: '2'
+    size: '1024'
+    srate: fs/decim
+    stemplot: 'False'
+    style1: '1'
+    style10: '1'
+    style2: '1'
+    style3: '1'
+    style4: '1'
+    style5: '1'
+    style6: '1'
+    style7: '1'
+    style8: '1'
+    style9: '1'
+    tr_chan: '0'
+    tr_delay: '0'
+    tr_level: '0.0'
+    tr_mode: qtgui.TRIG_MODE_FREE
+    tr_slope: qtgui.TRIG_SLOPE_POS
+    tr_tag: '""'
+    type: float
+    update_time: '0.10'
+    width1: '1'
+    width10: '1'
+    width2: '1'
+    width3: '1'
+    width4: '1'
+    width5: '1'
+    width6: '1'
+    width7: '1'
+    width8: '1'
+    width9: '1'
+    ylabel: Amplitude
+    ymax: '1'
+    ymin: '-1'
+    yunit: '""'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1176, 228.0]
+    rotation: 0
+    state: true
+- name: rtlsdr_source_0
+  id: rtlsdr_source
+  parameters:
+    affinity: ''
+    alias: ''
+    ant0: ''
+    ant1: ''
+    ant10: ''
+    ant11: ''
+    ant12: ''
+    ant13: ''
+    ant14: ''
+    ant15: ''
+    ant16: ''
+    ant17: ''
+    ant18: ''
+    ant19: ''
+    ant2: ''
+    ant20: ''
+    ant21: ''
+    ant22: ''
+    ant23: ''
+    ant24: ''
+    ant25: ''
+    ant26: ''
+    ant27: ''
+    ant28: ''
+    ant29: ''
+    ant3: ''
+    ant30: ''
+    ant31: ''
+    ant4: ''
+    ant5: ''
+    ant6: ''
+    ant7: ''
+    ant8: ''
+    ant9: ''
+    args: ''
+    bb_gain0: '20'
+    bb_gain1: '20'
+    bb_gain10: '20'
+    bb_gain11: '20'
+    bb_gain12: '20'
+    bb_gain13: '20'
+    bb_gain14: '20'
+    bb_gain15: '20'
+    bb_gain16: '20'
+    bb_gain17: '20'
+    bb_gain18: '20'
+    bb_gain19: '20'
+    bb_gain2: '20'
+    bb_gain20: '20'
+    bb_gain21: '20'
+    bb_gain22: '20'
+    bb_gain23: '20'
+    bb_gain24: '20'
+    bb_gain25: '20'
+    bb_gain26: '20'
+    bb_gain27: '20'
+    bb_gain28: '20'
+    bb_gain29: '20'
+    bb_gain3: '20'
+    bb_gain30: '20'
+    bb_gain31: '20'
+    bb_gain4: '20'
+    bb_gain5: '20'
+    bb_gain6: '20'
+    bb_gain7: '20'
+    bb_gain8: '20'
+    bb_gain9: '20'
+    bw0: '0'
+    bw1: '0'
+    bw10: '0'
+    bw11: '0'
+    bw12: '0'
+    bw13: '0'
+    bw14: '0'
+    bw15: '0'
+    bw16: '0'
+    bw17: '0'
+    bw18: '0'
+    bw19: '0'
+    bw2: '0'
+    bw20: '0'
+    bw21: '0'
+    bw22: '0'
+    bw23: '0'
+    bw24: '0'
+    bw25: '0'
+    bw26: '0'
+    bw27: '0'
+    bw28: '0'
+    bw29: '0'
+    bw3: '0'
+    bw30: '0'
+    bw31: '0'
+    bw4: '0'
+    bw5: '0'
+    bw6: '0'
+    bw7: '0'
+    bw8: '0'
+    bw9: '0'
+    clock_source0: ''
+    clock_source1: ''
+    clock_source2: ''
+    clock_source3: ''
+    clock_source4: ''
+    clock_source5: ''
+    clock_source6: ''
+    clock_source7: ''
+    comment: ''
+    corr0: '15'
+    corr1: '0'
+    corr10: '0'
+    corr11: '0'
+    corr12: '0'
+    corr13: '0'
+    corr14: '0'
+    corr15: '0'
+    corr16: '0'
+    corr17: '0'
+    corr18: '0'
+    corr19: '0'
+    corr2: '0'
+    corr20: '0'
+    corr21: '0'
+    corr22: '0'
+    corr23: '0'
+    corr24: '0'
+    corr25: '0'
+    corr26: '0'
+    corr27: '0'
+    corr28: '0'
+    corr29: '0'
+    corr3: '0'
+    corr30: '0'
+    corr31: '0'
+    corr4: '0'
+    corr5: '0'
+    corr6: '0'
+    corr7: '0'
+    corr8: '0'
+    corr9: '0'
+    dc_offset_mode0: '0'
+    dc_offset_mode1: '0'
+    dc_offset_mode10: '0'
+    dc_offset_mode11: '0'
+    dc_offset_mode12: '0'
+    dc_offset_mode13: '0'
+    dc_offset_mode14: '0'
+    dc_offset_mode15: '0'
+    dc_offset_mode16: '0'
+    dc_offset_mode17: '0'
+    dc_offset_mode18: '0'
+    dc_offset_mode19: '0'
+    dc_offset_mode2: '0'
+    dc_offset_mode20: '0'
+    dc_offset_mode21: '0'
+    dc_offset_mode22: '0'
+    dc_offset_mode23: '0'
+    dc_offset_mode24: '0'
+    dc_offset_mode25: '0'
+    dc_offset_mode26: '0'
+    dc_offset_mode27: '0'
+    dc_offset_mode28: '0'
+    dc_offset_mode29: '0'
+    dc_offset_mode3: '0'
+    dc_offset_mode30: '0'
+    dc_offset_mode31: '0'
+    dc_offset_mode4: '0'
+    dc_offset_mode5: '0'
+    dc_offset_mode6: '0'
+    dc_offset_mode7: '0'
+    dc_offset_mode8: '0'
+    dc_offset_mode9: '0'
+    freq0: fc
+    freq1: 100e6
+    freq10: 100e6
+    freq11: 100e6
+    freq12: 100e6
+    freq13: 100e6
+    freq14: 100e6
+    freq15: 100e6
+    freq16: 100e6
+    freq17: 100e6
+    freq18: 100e6
+    freq19: 100e6
+    freq2: 100e6
+    freq20: 100e6
+    freq21: 100e6
+    freq22: 100e6
+    freq23: 100e6
+    freq24: 100e6
+    freq25: 100e6
+    freq26: 100e6
+    freq27: 100e6
+    freq28: 100e6
+    freq29: 100e6
+    freq3: 100e6
+    freq30: 100e6
+    freq31: 100e6
+    freq4: 100e6
+    freq5: 100e6
+    freq6: 100e6
+    freq7: 100e6
+    freq8: 100e6
+    freq9: 100e6
+    gain0: '10'
+    gain1: '10'
+    gain10: '10'
+    gain11: '10'
+    gain12: '10'
+    gain13: '10'
+    gain14: '10'
+    gain15: '10'
+    gain16: '10'
+    gain17: '10'
+    gain18: '10'
+    gain19: '10'
+    gain2: '10'
+    gain20: '10'
+    gain21: '10'
+    gain22: '10'
+    gain23: '10'
+    gain24: '10'
+    gain25: '10'
+    gain26: '10'
+    gain27: '10'
+    gain28: '10'
+    gain29: '10'
+    gain3: '10'
+    gain30: '10'
+    gain31: '10'
+    gain4: '10'
+    gain5: '10'
+    gain6: '10'
+    gain7: '10'
+    gain8: '10'
+    gain9: '10'
+    gain_mode0: '0'
+    gain_mode1: '0'
+    gain_mode10: 'False'
+    gain_mode11: 'False'
+    gain_mode12: 'False'
+    gain_mode13: 'False'
+    gain_mode14: 'False'
+    gain_mode15: 'False'
+    gain_mode16: 'False'
+    gain_mode17: 'False'
+    gain_mode18: 'False'
+    gain_mode19: 'False'
+    gain_mode2: '0'
+    gain_mode20: 'False'
+    gain_mode21: 'False'
+    gain_mode22: 'False'
+    gain_mode23: 'False'
+    gain_mode24: 'False'
+    gain_mode25: 'False'
+    gain_mode26: 'False'
+    gain_mode27: 'False'
+    gain_mode28: 'False'
+    gain_mode29: 'False'
+    gain_mode3: '0'
+    gain_mode30: 'False'
+    gain_mode31: 'False'
+    gain_mode4: '0'
+    gain_mode5: 'False'
+    gain_mode6: 'False'
+    gain_mode7: 'False'
+    gain_mode8: 'False'
+    gain_mode9: 'False'
+    if_gain0: '20'
+    if_gain1: '20'
+    if_gain10: '20'
+    if_gain11: '20'
+    if_gain12: '20'
+    if_gain13: '20'
+    if_gain14: '20'
+    if_gain15: '20'
+    if_gain16: '20'
+    if_gain17: '20'
+    if_gain18: '20'
+    if_gain19: '20'
+    if_gain2: '20'
+    if_gain20: '20'
+    if_gain21: '20'
+    if_gain22: '20'
+    if_gain23: '20'
+    if_gain24: '20'
+    if_gain25: '20'
+    if_gain26: '20'
+    if_gain27: '20'
+    if_gain28: '20'
+    if_gain29: '20'
+    if_gain3: '20'
+    if_gain30: '20'
+    if_gain31: '20'
+    if_gain4: '20'
+    if_gain5: '20'
+    if_gain6: '20'
+    if_gain7: '20'
+    if_gain8: '20'
+    if_gain9: '20'
+    iq_balance_mode0: '0'
+    iq_balance_mode1: '0'
+    iq_balance_mode10: '0'
+    iq_balance_mode11: '0'
+    iq_balance_mode12: '0'
+    iq_balance_mode13: '0'
+    iq_balance_mode14: '0'
+    iq_balance_mode15: '0'
+    iq_balance_mode16: '0'
+    iq_balance_mode17: '0'
+    iq_balance_mode18: '0'
+    iq_balance_mode19: '0'
+    iq_balance_mode2: '0'
+    iq_balance_mode20: '0'
+    iq_balance_mode21: '0'
+    iq_balance_mode22: '0'
+    iq_balance_mode23: '0'
+    iq_balance_mode24: '0'
+    iq_balance_mode25: '0'
+    iq_balance_mode26: '0'
+    iq_balance_mode27: '0'
+    iq_balance_mode28: '0'
+    iq_balance_mode29: '0'
+    iq_balance_mode3: '0'
+    iq_balance_mode30: '0'
+    iq_balance_mode31: '0'
+    iq_balance_mode4: '0'
+    iq_balance_mode5: '0'
+    iq_balance_mode6: '0'
+    iq_balance_mode7: '0'
+    iq_balance_mode8: '0'
+    iq_balance_mode9: '0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    nchan: '1'
+    num_mboards: '1'
+    sample_rate: fs
+    sync: sync
+    time_source0: ''
+    time_source1: ''
+    time_source2: ''
+    time_source3: ''
+    time_source4: ''
+    time_source5: ''
+    time_source6: ''
+    time_source7: ''
+    type: fc32
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [226, -1]
+    rotation: 0
+    state: disabled
+
+connections:
+- [analog_quadrature_demod_cf_0_0, '0', digital_clock_recovery_mm_xx_0, '0']
+- [analog_quadrature_demod_cf_0_0, '0', qtgui_time_sink_x_0_0, '0']
+- [analog_simple_squelch_cc_0, '0', analog_quadrature_demod_cf_0_0, '0']
+- [blocks_char_to_float_0, '0', qtgui_time_sink_x_0, '0']
+- [blocks_complex_to_mag_0, '0', blocks_multiply_const_vxx_0, '0']
+- [blocks_multiply_const_vxx_0, '0', qtgui_time_sink_x_0_0, '1']
+- [cc11xx_cc11xx_deframer_bb_0, out, network_socket_pdu_0, pdus]
+- [digital_binary_slicer_fb_0, '0', blocks_char_to_float_0, '0']
+- [digital_binary_slicer_fb_0, '0', digital_correlate_access_code_tag_xx_0, '0']
+- [digital_clock_recovery_mm_xx_0, '0', digital_binary_slicer_fb_0, '0']
+- [digital_correlate_access_code_tag_xx_0, '0', cc11xx_cc11xx_deframer_bb_0, '0']
+- [low_pass_filter_0, '0', analog_simple_squelch_cc_0, '0']
+- [low_pass_filter_0, '0', blocks_complex_to_mag_0, '0']
+- [osmosdr_source_0, '0', low_pass_filter_0, '0']
+- [osmosdr_source_0, '0', qtgui_freq_sink_x_0, '0']
+- [rtlsdr_source_0, '0', low_pass_filter_0, '0']
+- [rtlsdr_source_0, '0', qtgui_freq_sink_x_0, '0']
+
+metadata:
+  file_format: 1
+  grc_version: v3.11.0.0git-55-g8526e6f8

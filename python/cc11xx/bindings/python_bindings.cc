@@ -21,6 +21,7 @@ namespace py = pybind11;
 // Please do not delete
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
+void bind_cc11xx_deframer_bb(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -49,5 +50,6 @@ PYBIND11_MODULE(cc11xx_python, m)
     // Please do not delete
     /**************************************/
     // BINDING_FUNCTION_CALLS(
+    bind_cc11xx_deframer_bb(m);
     // ) END BINDING_FUNCTION_CALLS
 }
