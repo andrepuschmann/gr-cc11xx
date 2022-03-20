@@ -21,7 +21,7 @@
 #ifndef INCLUDED_CC11XX_CC11XX_DEFRAMER_BB_IMPL_H
 #define INCLUDED_CC11XX_CC11XX_DEFRAMER_BB_IMPL_H
 
-#include <cc11xx/cc11xx_deframer_bb.h>
+#include <gnuradio/cc11xx/cc11xx_deframer_bb.h>
 #include "cc11xx_utility.h"
 #include "cc11xx_frame.h"
 
