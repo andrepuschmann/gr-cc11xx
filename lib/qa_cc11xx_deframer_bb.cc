@@ -22,8 +22,8 @@
 #include <gnuradio/attributes.h>
 #include <cppunit/TestAssert.h>
 #include "qa_cc11xx_deframer_bb.h"
-#include <cc11xx/cc11xx_deframer_bb.h>
-#include <cc11xx_frame.h>
+#include <gnuradio/cc11xx/cc11xx_deframer_bb.h>
+#include <gnuradio/cc11xx_frame.h>
 #include "cc11xx_utility.h"
 
 namespace gr {

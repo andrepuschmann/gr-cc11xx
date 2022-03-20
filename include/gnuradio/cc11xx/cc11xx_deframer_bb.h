@@ -22,7 +22,7 @@
 #ifndef INCLUDED_CC11XX_CC11XX_DEFRAMER_BB_H
 #define INCLUDED_CC11XX_CC11XX_DEFRAMER_BB_H
 
-#include <cc11xx/api.h>
+#include <gnuradio/cc11xx/api.h>
 #include <gnuradio/block.h>
 
 namespace gr {
@@ -40,7 +40,7 @@ namespace gr {
     class CC11XX_API cc11xx_deframer_bb : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<cc11xx_deframer_bb> sptr;
+      typedef std::shared_ptr<cc11xx_deframer_bb> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of cc11xx::cc11xx_deframer_bb.

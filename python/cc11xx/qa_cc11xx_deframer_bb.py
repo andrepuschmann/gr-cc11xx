@@ -21,7 +21,7 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import cc11xx_swig as cc11xx
+import cc11xx_python as cc11xx
 
 class qa_cc11xx_deframer_bb (gr_unittest.TestCase):
 
