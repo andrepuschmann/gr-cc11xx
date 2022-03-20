@@ -29,6 +29,7 @@ include(GrPybind)
 ########################################################################
 
 list(APPEND cc11xx_python_files
+    cc11xx_deframer_bb_python.cc
     python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(cc11xx
