@@ -935,7 +935,7 @@ blocks:
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
-    gui_hint: ''
+    gui_hint: nb@0
     label: Relative Gain
     label1: ''
     label10: ''''''

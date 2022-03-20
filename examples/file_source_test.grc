@@ -584,6 +584,21 @@ blocks:
     coordinate: [1216, 348.0]
     rotation: 0
     state: true
+- name: pcap_write_0
+  id: pcap_write
+  parameters:
+    affinity: ''
+    alias: ''
+    append: 'True'
+    comment: ''
+    f: /tmp/gnuradio.pcap
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 500.0]
+    rotation: 0
+    state: true
 - name: qtgui_freq_sink_x_0
   id: qtgui_freq_sink_x
   parameters:
@@ -619,7 +634,7 @@ blocks:
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
-    gui_hint: ''
+    gui_hint: nb@0
     label: Relative Gain
     label1: ''
     label10: ''''''
@@ -871,6 +886,7 @@ connections:
 - [blocks_throttle_0, '0', low_pass_filter_0, '0']
 - [blocks_throttle_0, '0', qtgui_freq_sink_x_0, '0']
 - [cc11xx_cc11xx_deframer_bb_0, out, network_socket_pdu_0, pdus]
+- [cc11xx_cc11xx_deframer_bb_0, out, pcap_write_0, pdus]
 - [digital_binary_slicer_fb_0, '0', blocks_char_to_float_0, '0']
 - [digital_binary_slicer_fb_0, '0', digital_correlate_access_code_tag_xx_0, '0']
 - [digital_clock_recovery_mm_xx_0, '0', digital_binary_slicer_fb_0, '0']
