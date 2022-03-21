@@ -2,7 +2,7 @@
 
 id: cc11xx_cc11xx_deframer_bb
 label: CC11XX Deframer
-category: cc11xx
+category: '[cc11xx]'
 
 parameters:
 -   id: sync1
